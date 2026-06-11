@@ -4,7 +4,7 @@
 
 // REEMPLAZA POR TU API KEY
 
-const GROQ_API_KEY = "";
+const GROQ_API_KEY = "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";
 
 // Endpoint compatible OpenAI de xAI
 
