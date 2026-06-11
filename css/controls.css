@@ -1,0 +1,143 @@
+/* =========================
+   SLIDERS
+========================= */
+
+input[type="range"] {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+
+    height: 8px;
+    border-radius: 999px;
+
+    background: #dbeafe;
+    outline: none;
+
+    cursor: pointer;
+}
+
+/* =========================
+   TRACK
+========================= */
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 999px;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 8px;
+    border-radius: 999px;
+}
+
+/* =========================
+   THUMB
+========================= */
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+    border: 2px solid white;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+
+    margin-top: -6px;
+
+    transition: 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+
+    transition: 0.2s;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.15);
+}
+
+/* =========================
+   VALORES NUMÉRICOS
+========================= */
+
+.control-group span {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* =========================
+   FOCUS
+========================= */
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.2),
+        0 2px 6px rgba(0,0,0,0.25);
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.2),
+        0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   BOTONES SECUNDARIOS
+========================= */
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =========================
+   EFECTO TARJETA
+========================= */
+
+.control-group {
+    padding: 10px;
+    border-radius: 8px;
+
+    transition: background 0.2s ease;
+}
+
+.control-group:hover {
+    background: rgba(37, 99, 235, 0.05);
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+.control-group span {
+    transition: color 0.2s ease;
+}
+
+.control-group:hover span {
+    color: #1d4ed8;
+}

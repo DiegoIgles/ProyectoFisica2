@@ -1,0 +1,210 @@
+/* =========================
+   RESET BÁSICO
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --bg-color: #f4f6f9;
+    --panel-color: #ffffff;
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --border-color: #d1d5db;
+    --text-color: #1f2937;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-height: calc(100vh - 90px);
+}
+
+/* =========================
+   SIMULACIÓN
+========================= */
+
+.simulation-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#simulationCanvas {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   PANEL LATERAL
+========================= */
+
+.controls-panel {
+    width: 320px;
+    background: var(--panel-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.controls-panel h2 {
+    text-align: center;
+}
+
+/* =========================
+   GRUPOS DE CONTROLES
+========================= */
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-group label {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+    min-width: 90px;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px;
+
+    cursor: pointer;
+
+    background: var(--primary-color);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.buttons button:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   INFORMACIÓN FÍSICA
+========================= */
+
+.info-panel {
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.info-panel p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.info-panel p:last-child {
+    margin-bottom: 0;
+}
+
+.info-panel span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* =========================
+   SEPARADOR
+========================= */
+
+hr {
+    border: none;
+    height: 1px;
+    background: var(--border-color);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .controls-panel {
+        width: 100%;
+    }
+
+    #simulationCanvas {
+        width: 100%;
+    }
+}
